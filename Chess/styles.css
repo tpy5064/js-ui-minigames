@@ -1,0 +1,48 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-square: #6f85b7;
+    --light-square: #eee;
+    --square-size: 90px;
+}
+
+body {
+    margin: 0;
+}
+
+.board {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(8, auto);
+}
+
+.light-square {
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: var(--light-square);
+}
+
+.dark-square {
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: var(--dark-square);
+}
+
+.light-square,
+.dark-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chess-piece {
+    width: calc(var(--square-size) * .9);
+    height: calc(var(--square-size) * .9);
+}
